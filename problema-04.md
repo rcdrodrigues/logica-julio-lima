@@ -38,3 +38,29 @@ O total do meu pedido é R$ 500,00 e o meu cliente **não é VIP**.
 4. Calcular o valor do pedido com ou sem desconto  
 5. Exibir o valor final do pedido
 
+---
+
+### 💻 Código (JavaScript)
+
+```javascript
+function calcularEaplicarDesconto(valorPedido, tipoCliente) {
+  let valorFinalDoPedido;
+
+  if (tipoCliente.toLowerCase() === 'vip') {
+    valorFinalDoPedido = valorPedido - (valorPedido * 10 / 100);
+  } else {
+    valorFinalDoPedido = valorPedido;
+  }
+
+  return valorFinalDoPedido;
+}
+
+const resultadoComDesconto = calcularEaplicarDesconto(500.00, 'vip');
+console.log('Cliente VIP com desconto paga R$: ' + resultadoComDesconto);
+
+const resultadoSemDesconto = calcularEaplicarDesconto(500.00, '');
+console.log('Total a pagar sem desconto VIP R$: ' + resultadoSemDesconto);
+
+Cliente VIP com desconto paga R$: 450
+Total a pagar sem desconto VIP R$: 500
+
