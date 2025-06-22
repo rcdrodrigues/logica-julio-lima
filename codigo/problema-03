@@ -1,0 +1,16 @@
+## 💻 Código (JavaScript)
+
+```javascript
+function calcularMedia(number1, number2, number3) {
+  const somarNumeros = number1 + number2 + number3;
+  const resultadoDaMedia = somarNumeros / 3;
+  return resultadoDaMedia;
+}
+
+const calculoFinal1 = calcularMedia(5, 10, 25);
+console.log("Valor da média dos números inteiros é: " + calculoFinal1);
+
+### Saida Console 
+
+Valor da média dos números inteiros é: 13.333333333333334  
+Valor da média dos números inteiros é: 50.666666666666664
